@@ -13,7 +13,7 @@ function playRound(computerSelection, playerSelection) {
       alert("You win, scissors beat paper!")
   }
   else if (computerSelection === "scissors" && playerSelection.toLowerCase() === "rock") {
-    alert("You win, scissors beat rock")
+    alert("You win, rock beat scissors")
   }
   else if (computerSelection === "rock" && playerSelection.toLowerCase() === "scissors") {
     alert("You loose, rock beats scissors")
@@ -28,7 +28,7 @@ function playRound(computerSelection, playerSelection) {
   }
 }
 
-const playerSelection = "PAPER";
+const playerSelection = prompt("Please enter your choice", " ");
 const computerSelection = computerPlay();
 console.log(computerSelection);
 playRound(computerSelection, playerSelection);
