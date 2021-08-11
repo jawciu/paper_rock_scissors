@@ -28,7 +28,10 @@ function playRound(computerSelection, playerSelection) {
   }
 }
 
-const playerSelection = prompt("Please enter your choice", " ");
-const computerSelection = computerPlay();
-console.log(computerSelection);
-playRound(computerSelection, playerSelection);
+for (let i=1; i<=5; i++) {
+  computerPlay()
+  const playerSelection = prompt("Please enter your choice", " ");
+  const computerSelection = computerPlay();
+  console.log(computerSelection);
+  playRound(computerSelection, playerSelection);
+}
