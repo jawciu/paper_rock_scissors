@@ -1,4 +1,3 @@
-
 function computerPlay() {
   let computerChoices = ["paper", "rock", "scissors"];
   let computerChoice = computerChoices[Math.floor(Math.random()*computerChoices.length)];
@@ -30,8 +29,11 @@ function playRound(computerSelection, playerSelection) {
 
 for (let i=1; i<=5; i++) {
   computerPlay()
-  const playerSelection = prompt("Please enter your choice", " ");
+  const playerSelection = prompt("Please enter your choice");
   const computerSelection = computerPlay();
   console.log(computerSelection);
+  console.log(playerSelection);
   playRound(computerSelection, playerSelection);
 }
+
+
