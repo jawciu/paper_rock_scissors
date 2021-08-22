@@ -22,11 +22,33 @@ choices.forEach(choice => {
     playerChoice = e.target.id
     playerChoiceDisplay.textContent = "Player Choice: " + choice ;
     computerPlay();
+    playRound()
   })
 });
 
 function computerPlay() {
   computerChoice = choices[Math.floor(Math.random()*choices.length)];
   comuterChoiceDisplay.textContent = "Computer Choice: " + computerChoice;
+}
+
+
+function playRound() {
+  switch(playerChoice+computerChoice) {
+    case 'scissorspaper':
+    case 'paperrock':
+    case 'rockscissors':
+      resultDisplay.textContent = "Result: You win!!!"; 
+      break;
+    case 'paperscissors':
+    case 'rockpaper':
+    case 'scissorsrock':
+      resultDisplay.textContent = "Result: Computer wins!";
+      break;
+    case 'paperpaper':
+    case 'rockrock':
+    case 'scissorsscissors':
+      resultDisplay.textContent = "Result: Even-steven!!!"
+      break;
+  }
 }
 
